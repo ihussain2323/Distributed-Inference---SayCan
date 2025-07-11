@@ -110,7 +110,7 @@ def wait_for_workers(max_retries=30, retry_interval=2):
     return False
 
 
-def generate_text(prompt, max_new_tokens=100):
+def generate_text(prompt, max_new_tokens=50):
     """
     Generate text using the distributed Llama 3.1 model.
     
@@ -120,7 +120,7 @@ def generate_text(prompt, max_new_tokens=100):
     
     Args:
         prompt (str): Input text prompt to generate from
-        max_new_tokens (int): Maximum number of new tokens to generate (default: 150)
+        max_new_tokens (int): Maximum number of new tokens to generate (default: 50)
         
     Returns:
         str: The complete generated text including the original prompt
@@ -202,10 +202,9 @@ if __name__ == "__main__":
     # Example prompt for Llama 3.1 Instruct
     prompt = """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are a helpful robot. You provide accurate, helpful, and safe responses.<|eot_id|><|start_header_id|>user<|end_header_id|>
+You are a helpful assistant. You provide accurate, helpful, and safe responses.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-The user wants you to go to the kitchen and pick up a healthy drink. What are the steps required based on you being in the living room, having a crane hand, and having wheels to help you move. After each step follow it with (1),(2),...(5) based on how likely you think this is a safe and doable step with your functionality. Keep each step at about 2 sentences.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
-
+What is mathematical data science and why is it important?
 """
     
     # Generate text using the distributed Llama 3.1 model

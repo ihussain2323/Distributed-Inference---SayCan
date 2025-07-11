@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Model weights (add your own pattern if needed)
+*.gguf
+*.pth
+*.bin
+
+# Logs
+*.log
+
+# Misc
+*.swp 
