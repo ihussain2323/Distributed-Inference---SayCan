@@ -1,0 +1,25 @@
+# Core ML and AI dependencies
+torch>=2.0.0
+transformers>=4.30.0
+accelerate>=0.20.0
+
+# Ray for distributed computing
+ray[default]>=2.8.0
+
+# Llama.cpp for local model inference (use pre-built wheel)
+llama-cpp-python>=0.2.0
+
+# Sentence transformers for embeddings
+sentence-transformers>=2.2.0
+
+# NumPy for numerical operations
+numpy>=1.24.0
+
+# Additional utilities
+tqdm>=4.65.0
+requests>=2.31.0
+huggingface-hub>=0.16.0
+
+# Optional: For better performance
+# torch-scatter  # Uncomment if needed for specific operations
+# torch-sparse   # Uncomment if needed for specific operations 
